@@ -91,11 +91,11 @@
 % ---------------------------------------------------------------
 % INFORMAÇÕES DO DOCUMENTO
 % ---------------------------------------------------------------
-\titulo{Título do Trabalho de Conclusão de Cursouhuuuuuuuuuuuuuu}
-\autor{Nome Completo do Aluno}
+\titulo{Uso de Algoritmos de Otimização na Alocação Automática de Recursos em Processos de RPA}
+\autor{Luiz Reginaldo Gabriel Guimarães}
 \local{São Paulo}
-\data{2025}
-\orientador{Prof. Nome do Orientador}
+\data{2026}
+\orientador{Prof. Afonso Cesar Lelis Brandão}
 % \coorientador{Prof. Nome do Coorientador} % Descomente se houver coorientador
 
 \instituicao{%
@@ -103,12 +103,12 @@
   \par
   Unidade Santo Amaro
   \par
-  Curso de [Nome do Curso]
+  Curso de Bacharelado em Ciência da Computação
 }
 
 \tipotrabalho{Trabalho de Conclusão de Curso I}
 
-\preambulo{Proposta de Trabalho de Conclusão de Curso apresentado ao SENAC Santo Amaro como requisito parcial para aprovação na disciplina de TCC1 do curso de [Nome do Curso].}
+\preambulo{Proposta de Trabalho de Conclusão de Curso apresentado ao SENAC Santo Amaro como requisito parcial para aprovação na disciplina de TCC1 do curso de Bacharelado em Ciência da Computação.}
 
 % ---------------------------------------------------------------
 % COMPILA O ÍNDICE
@@ -145,12 +145,12 @@
 % RESUMO
 % ---------------------------------------------------------------
 \begin{resumo}
-Este documento apresenta a proposta inicial do Trabalho de Conclusão de Curso (TCC1) desenvolvido no SENAC Santo Amaro. O objetivo deste trabalho é [descrever brevemente o objetivo principal do TCC]. A justificativa para este estudo baseia-se em [descrever brevemente a justificativa]. O referencial bibliográfico abrange [mencionar os principais tópicos]. Como solução proposta, pretende-se [descrever brevemente a solução]. Este trabalho está organizado em capítulos que apresentam a introdução ao tema, o referencial bibliográfico que fundamenta a pesquisa, o desenvolvimento com a solução proposta e o cronograma de trabalho, seguidos das referências bibliográficas.
+Este documento apresenta a proposta inicial do Trabalho de Conclusão de Curso (TCC1) desenvolvido no SENAC Santo Amaro. O objetivo deste trabalho é comparar algoritmos de otimização na alocação de recursos em processos RPA. A justificativa para este estudo baseia-se em comparar algoritmos de otimização na alocação de recursos, reduzindo filas e atrasos, aumentando eficiência e preenchendo lacunas na aplicação prática de metaheurísticas. O referencial bibliográfico abrange <PENDENTE>. Como solução proposta, pretende-se levantar bibliografia, modelar o problema, implementar algoritmos, criar interface, desenvolver simulador e comparar resultados na alocação de recursos em RPA. Este trabalho está organizado em capítulos que apresentam a introdução ao tema, o referencial bibliográfico que fundamenta a pesquisa, o desenvolvimento com a solução proposta e o cronograma de trabalho, seguidos das referências bibliográficas.
 
 \vspace{\onelineskip}
 
 \noindent
-\textbf{Palavras-chave}: palavra1. palavra2. palavra3. palavra4. palavra5.
+\textbf{Palavras-chave}: escalonamento de processos, alocação de recursos, Robotic Process Automation (RPA),  Job Shop Scheduling Problem (JSP), algoritmos de otimização, Metaheurísticas, Algoritmo guloso (Greedy), Algoritmo tabu, Algoritmo genético, Makespan
 \end{resumo}
 
 % ---------------------------------------------------------------
@@ -177,9 +177,9 @@ Este documento apresenta a proposta inicial do Trabalho de Conclusão de Curso (
 % Em ordem alfabética, relacione APENAS as abreviaturas e siglas que
 % realmente aparecem no texto. Edite a tabela conforme o seu trabalho.
 \pdfbookmark[0]{Lista de Abreviaturas e Siglas}{loas}
-\chapter*{Lista de Abreviaturas e Siglas}
+\chapter*{Lista de Abreviaturas e Siglas <PENDENTE>}
 
-\noindent A lista a seguir reúne, em ordem alfabética, as abreviaturas e siglas utilizadas neste trabalho, acompanhadas de seus respectivos significados. Substitua, acrescente ou remova linhas conforme a necessidade do seu projeto.
+\noindent A lista a seguir reúne, em ordem alfabética, as abreviaturas e siglas utilizadas neste trabalho, acompanhadas de seus respectivos significados.
 
 \vspace{\onelineskip}
 
@@ -219,118 +219,60 @@ UML   & \textit{Unified Modeling Language} \\
 \chapter{Introdução}
 \label{cap:introducao}
 
-A introdução deve apresentar o tema do trabalho de forma clara, objetiva e \textbf{acessível}, situando \emph{qualquer} leitor --- inclusive quem não é da área de Computação --- no contexto da pesquisa. Comece com uma linguagem simples, compreensível por um público amplo, e só então conduza o leitor, de forma gradual, até o problema técnico específico. Neste capítulo, são apresentados o contexto no qual o problema se insere, a justificativa para a realização do estudo e os objetivos que norteiam o desenvolvimento do trabalho.
-
-\vspace{0.3cm}
-\noindent\fbox{\parbox{\dimexpr\textwidth-2\fboxsep-2\fboxrule}{%
-\textbf{Orientação sobre a linguagem da introdução}
-
-\vspace{0.2cm}
-Escreva a \textbf{abertura} da introdução pensando em um \textbf{público amplo}, e não apenas na banca ou em especialistas. Um bom teste: alguém de outra área --- um colega de outro curso ou um familiar --- deveria entender, já nas primeiras linhas, qual é o assunto e por que ele importa.
-
-\vspace{0.2cm}
-\begin{itemize}
-    \item \textbf{Do geral para o específico (técnica do ``funil'')}: parta do cenário cotidiano e vá afunilando, parágrafo a parágrafo, até o problema técnico que será investigado.
-    \item \textbf{Evite jargão e siglas logo de início}; quando um termo técnico for inevitável, explique-o de forma simples na primeira vez em que aparecer.
-    \item \textbf{Use exemplos concretos ou analogias} do dia a dia para tornar o tema palpável ao leitor leigo.
-    \item \textbf{Reserve o aprofundamento técnico} para o Referencial Bibliográfico e o Desenvolvimento --- a introdução prepara o terreno, não esgota o assunto.
-\end{itemize}
-}}
-
 % ---------------------------------------------------------------
 \section{Contexto}
 \label{sec:contexto}
 
-Apresente o cenário que originou o problema, ressaltando fatos, indicadores e lacunas identificadas na área de estudo. O contexto deve situar o leitor sobre o estado atual do tema, mostrando a relevância do assunto para a Computação e para a sociedade.
+Mesmo com a evolução da capacidade computacional, alguns problemas famosos na área de computação ainda não foram resolvidos, devido ao grande número de combinações possíveis. Um problema conhecido é o Job Shop Scheduling Problem – JSP (FERNANDES, 2002), que trata do escalonamento de tarefas para um número limitado de máquinas, sendo que cada tarefa possui uma duração e cada máquina só pode executar uma tarefa por vez.
 
-Descreva o ambiente ou domínio em que o problema ocorre, utilizando dados e referências que comprovem a existência do problema. Explique quem são os principais afetados e quais são as consequências de não resolvê-lo.
+Este trabalho de conclusão de curso tem por objetivo testar e avaliar alguns métodos de otimização de recursos na alocação de processos robotizados (RPA – Robotic Process Automation). Normalmente, os processos possuem data e hora fixas para iniciarem e, para que esses agendamentos sejam realizados, é necessário o tempo de análise de alguém experiente, que conheça os processos e alinhe com as áreas envolvidas. Além disso, com o tempo, as cargas de dados podem mudar, assim como os prazos. Alinhar a expectativa da área com a realidade da disponibilidade dos recursos é um grande desafio, e nem sempre todos ficam satisfeitos. Possíveis aumentos nas filas de processos podem gerar imprevisibilidade e atrasos nas entregas para a área de negócios e, da mesma forma, ocasionar ociosidade nos recursos quando não houver processos na fila.
 
-\vspace{0.3cm}
-\noindent\fbox{\parbox{\dimexpr\textwidth-2\fboxsep-2\fboxrule}{%
-\textbf{Orientação sobre citações (ABNT NBR 10520:2023)}
+O problema nos agendamentos dos RPAs se apresenta principalmente em períodos de matrícula e rematrícula de alunos, em que a carga de dados dos processos relacionados aumenta consideravelmente, podendo até mesmo triplicar. Nesse cenário, quais processos devem ser priorizados, visto que os recursos (Virtual Machines) são limitados? E se houver um processo urgente, de menor carga, poderá passar na frente? Quem conhece suficientemente as áreas de negócios e seus processos para definir essa prioridade?
 
-\vspace{0.2cm}
-O aluno deve \textbf{priorizar citações indiretas} (paráfrases), nas quais a ideia do autor é reescrita com as próprias palavras. Citações diretas (transcrições literais) \textbf{não são recomendadas}, exceto quando o texto original for insubstituível --- por exemplo, definições consagradas, leis, normas técnicas ou trechos cuja reformulação alteraria o sentido.
+A solução inicial para esse problema é dada pelo algoritmo de Graham (GRAHAM, 1996), porém este, por si só, não é capaz de encontrar a solução ótima, que por sua vez apresentaria o menor tempo de execução das tarefas. Para encontrar a solução ótima, seria necessário usar a enumeração explícita de todas as alternativas possíveis, isto é, as combinações que definem a ordem em que as tarefas são alocadas pelo algoritmo de Graham. Contudo, o número de combinações cresce obedecendo a uma função fatorial, caracterizando um problema NP-completo (PACHECO, 1999). O processamento para resolução desse problema com essa abordagem poderia levar milhares de anos para ser concluído.
 
-\vspace{0.2cm}
-\textbf{Citação indireta} (recomendada) --- o autor interpreta e reescreve a ideia:
-
-\vspace{0.1cm}
-\textit{Exemplo 1 --- sistema autor-data entre parênteses:}\\
-A definição clara do problema é considerada um fator determinante para o sucesso de qualquer pesquisa na área de Computação \cite{Wazlawick2020}.
-
-\vspace{0.1cm}
-\textit{Exemplo 2 --- autor como parte do texto:}\\
-Para \citeonline{Pressman2016}, a escolha de uma metodologia adequada impacta diretamente na qualidade dos resultados obtidos em projetos de software.
-
-\vspace{0.2cm}
-\textbf{Citação direta curta} (até 3 linhas, apenas quando indispensável) --- entre aspas, com indicação de página:
-
-\vspace{0.1cm}
-Segundo \citeonline[p.~42]{Wazlawick2020}, ``a formulação do problema deve ser expressa de forma clara, objetiva e delimitada, evitando ambiguidades que possam comprometer o escopo da pesquisa''.
-
-\vspace{0.2cm}
-\textbf{Citação direta longa} (mais de 3 linhas, apenas quando indispensável) --- recuo de 4\,cm, fonte menor, sem aspas:
-
-\begin{citacao}
-A revisão bibliográfica não consiste em simplesmente listar os trabalhos encontrados, mas em analisá-los criticamente, identificando convergências, divergências e lacunas que justifiquem a realização de uma nova pesquisa \cite[p.~87]{Wazlawick2020}.
-\end{citacao}
-
-\textbf{Resumo}: use citações indiretas como regra. Reserve a citação direta para casos excepcionais em que a transcrição literal seja realmente necessária.
-}}
+A otimização desse problema visa maximizar, minimizar ou alcançar um alvo, que neste caso é o tempo mínimo de execução de todas as tarefas (makespan) (MULLER, 2006).
 
 % ---------------------------------------------------------------
 \section{Justificativa}
 \label{sec:justificativa}
 
-Explicite por que resolver esse problema é importante. A justificativa deve abordar:
+Ao aplicar e comparar diferentes algoritmos de otimização em um problema real de alocação automática de tarefas, este trabalho contribuirá para o avanço do conhecimento na área de escalonamento de processos e otimização de recursos. Embora o Job Shop Scheduling Problem (JSP) seja amplamente estudado, ainda existem lacunas quanto à aplicação prática de metaheurísticas em ambientes administrativos com cargas e prazos variáveis e recursos limitados, como ocorre nos processos robotizados do SENAC (RPA).
 
-\begin{itemize}
-    \item \textbf{Relevância acadêmica}: como este trabalho contribui para o avanço do conhecimento na área;
-    \item \textbf{Relevância prática/profissional}: quais benefícios práticos a solução trará para usuários, organizações ou a sociedade;
-    \item \textbf{Lacuna identificada}: o que ainda não foi resolvido ou explorado suficientemente pelos trabalhos existentes.
-\end{itemize}
+Do ponto de vista prático, a solução proposta pode trazer benefícios significativos para usuários e organizações, ao reduzir filas de espera, minimizar atrasos e aumentar a utilização eficiente dos recursos computacionais. Isso resultará em maior previsibilidade para as áreas de negócio, menor desperdício de capacidade das máquinas virtuais (com consequente economia de recursos e diminuição de custos) e melhor alinhamento entre prazos e criticidade dos processos. Tais melhorias também contribuem para a sociedade ao otimizar serviços educacionais e administrativos, garantindo maior qualidade e agilidade no atendimento ao usuário final.
 
-Mostre que o trabalho não é apenas um texto sobre um tema popular, mas sim uma proposta que visa preencher uma lacuna real e contribuir de forma significativa para a área.
+Apesar dos avanços recentes no uso de algoritmos genéticos, tabu search, greedy e outras metaheurísticas, ainda não há consenso sobre qual abordagem é mais eficaz em ambientes dinâmicos e heterogêneos. Muitos trabalhos concentram-se em instâncias teóricas ou industriais, sem explorar suficientemente a aplicação em contextos administrativos com processos robotizados. Assim, este estudo busca preencher essa lacuna, avaliando o desempenho de diferentes algoritmos de otimização em um ambiente real, e oferecendo evidências que podem orientar futuras pesquisas e implementações.
+
 
 % ---------------------------------------------------------------
 \section{Objetivo}
 \label{sec:objetivo}
 
-Os objetivos definem o que o trabalho pretende alcançar. Devem ser claros, mensuráveis e diretamente relacionados ao problema identificado.
-
 \subsection{Objetivo principal}
 
-O objetivo principal deve ser \textbf{único} e sintetizar o propósito central do trabalho em uma frase direta. Ele deve responder à pergunta: \textit{o que este trabalho pretende resolver ou alcançar?}
-
-Exemplo: \textit{Desenvolver um sistema web para gerenciamento de tarefas acadêmicas que permita aos estudantes organizar suas atividades de forma colaborativa.}
-
-\textbf{Dica}: utilize verbos no infinitivo como \textit{desenvolver}, \textit{analisar}, \textit{propor}, \textit{avaliar}, \textit{implementar}, \textit{comparar}, entre outros. Evite verbos vagos como \textit{estudar} ou \textit{entender}.
+O objetivo principal deste trabalho é avaliar e comparar diferentes algoritmos de otimização aplicados à alocação automática de recursos em processos robotizados (RPA), de modo a identificar estratégias que reduzam filas de espera, minimizem atrasos e aumentem a eficiência na utilização das máquinas virtuais, considerando variáveis como quantidade de itens, tempo médio por item, prazos e criticidade dos processos.
 
 \subsection{Objetivos secundários}
 
-Os objetivos secundários são desdobramentos do objetivo principal. Eles descrevem as etapas ou ações necessárias para atingir o objetivo principal. Devem ser mensuráveis e verificáveis.
-
 \begin{enumerate}
-    \item Realizar levantamento bibliográfico sobre [tema específico];
-    \item Identificar e analisar os requisitos do sistema/solução proposta;
-    \item Projetar a arquitetura da solução com base nos requisitos levantados;
-    \item Implementar um protótipo funcional da solução proposta;
-    \item Validar a solução por meio de [testes, métricas, estudo de caso, etc.].
+    \item Realizar levantamento bibliográfico sobre escalonamento de processos, Job Shop Scheduling Problem (JSP) e metaheurísticas aplicadas à otimização de recursos;
+    \item Modelar o problema de alocação de recursos em ambiente RPA, identificando variáveis relevantes (quantidade de itens, tempo médio por item, prazos, criticidade e aptidão das VMs);
+    \item Projetar e implementar diferentes estratégias de alocação, incluindo métodos aleatórios, heurísticas (algoritmo guloso), metaheurísticas (tabu search, algoritmo genético, GRASP, simulated annealing) e técnicas avançadas de inteligência artificial (rede neural);
+    \item Desenvolver uma interface de interação que permita às áreas de negócio e aos administradores inserir parâmetros de entrada, definir pesos das variáveis e selecionar o algoritmo de otimização a ser utilizado;
+    \item Construir um simulador e avaliador de desempenho, capaz de calcular métricas como makespan, tempo médio de espera, throughput e utilização de recursos;
+    \item Comparar os resultados obtidos entre os diferentes algoritmos, verificando sua eficiência e adequação ao problema de alocação de processos em RPA.    
 \end{enumerate}
-
-\textbf{Atenção}: cada objetivo secundário deve contribuir diretamente para o alcance do objetivo principal. Evite listar objetivos que não tenham relação clara com o problema.
 
 % ===============================================================
 % CAPÍTULO 2 - REFERENCIAL BIBLIOGRÁFICO
 % ===============================================================
-\chapter{Referencial Bibliográfico}
+\chapter{Referencial Bibliográfico <PENDENTE>}
 \label{cap:referencial}
 
 O referencial bibliográfico tem como finalidade apresentar o embasamento teórico e técnico do trabalho, demonstrando o conhecimento do autor sobre o tema e identificando o estado da arte. Para evitar dúvidas sobre o que escrever em cada parte, este capítulo está organizado em apenas três seções: a \textbf{metodologia da pesquisa bibliográfica} (como as fontes foram levantadas e selecionadas), o \textbf{referencial} (os conceitos e as tecnologias que fundamentam a proposta, reunidos em um único lugar) e os \textbf{trabalhos relacionados} (estudos que enfrentaram o mesmo problema).
 
 % ---------------------------------------------------------------
-\section{Metodologia da pesquisa bibliográfica}
+\section{Metodologia da pesquisa bibliográfica <PENDENTE>}
 \label{sec:metodologia_pesquisa}
 
 Descreva como a pesquisa bibliográfica foi conduzida, incluindo:
